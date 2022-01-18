@@ -18,7 +18,7 @@ public class Airport {
     return name;
   }
 
-  private void setName(String aName) {
+  private void setName(String aName) throws IllegalArgumentException {
     if (aName.length() != 3 ){
       throw new IllegalArgumentException("Airport name must be 3 characters long");
     }

@@ -24,7 +24,7 @@ public class Flight {
     return airline;
   }
 
-  public void setAirline(Airline aAirline) {
+  public void setAirline(Airline aAirline)throws IllegalArgumentException  {
     if (aAirline == null){
       throw new IllegalArgumentException("Airline name can not be null");
     }
@@ -35,7 +35,7 @@ public class Flight {
     return origine;
   }
 
-  public void setOrigine(Airport aOrigine) {
+  public void setOrigine(Airport aOrigine)throws IllegalArgumentException  {
     if (aOrigine == null){
       throw new IllegalArgumentException("Airport name can not be null");
     }
@@ -46,7 +46,7 @@ public class Flight {
     return destination;
   }
 
-  public void setDestination(Airport aDestination) {
+  public void setDestination(Airport aDestination)throws IllegalArgumentException  {
     if (aDestination == null){
       throw new IllegalArgumentException("Airport name can not be null");
     }
@@ -57,7 +57,7 @@ public class Flight {
     return flightNumber;
   }
 
-  public void setFlightNumber(String aFlightNumber) {
+  public void setFlightNumber(String aFlightNumber)throws IllegalArgumentException  {
     if (aFlightNumber == null){
       throw new IllegalArgumentException("A flight number can not be null");
     }
@@ -68,8 +68,10 @@ public class Flight {
     return departureTime;
   }
 
-  public void setDepartureTime(Date departureTime) {
-
+  public void setDepartureTime(Date departureTime) throws IllegalArgumentException{
+    if (departureTime == null){
+      throw new IllegalArgumentException("A date and time can not be null");
+    }
     this.departureTime = departureTime;
   }
 

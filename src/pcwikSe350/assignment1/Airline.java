@@ -16,10 +16,8 @@ public class Airline {
     return name;
   }
 
-  private void setName(String aName) {
-    if (aName == null){
-      throw new IllegalArgumentException("Airline name can not be null");
-    }
+  private void setName(String aName) throws IllegalArgumentException {
+
     if (aName.length() > 8 ){
       throw new IllegalArgumentException("Airline name must be less then 8 characters");
     }
