@@ -3,7 +3,7 @@ package pcwikSe350.assignment1;
 import java.util.Date;
 import java.util.Objects;
 
-public class Flight {
+public class CommercialFlight {
   private Airline airline;
   private Airport origine;
   private Airport destination;
@@ -11,7 +11,7 @@ public class Flight {
   private Date departureTime;
 
 
-  public Flight(Airline airline, Airport origine, Airport destination, String flightNumber, Date departureTime){
+  public CommercialFlight(Airline airline, Airport origine, Airport destination, String flightNumber, Date departureTime){
     setAirline(airline);
     setOrigine(origine);
     setDestination(destination);
@@ -98,7 +98,7 @@ public class Flight {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    final Flight other = (Flight) o;
+    final CommercialFlight other = (CommercialFlight) o;
     if (getAirline().equals(other.getAirline())) {
       return false;
     }
